@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="TypeofDaka">
+        <item>学习</item>
+        <item>爱好</item>
+        <item>运动</item>
+        <item>阅读</item>
+        <item>早睡</item>
+    </string-array>
+    <string-array name="dayOfWeek">
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
+        <item>周日</item>
+    </string-array>
+</resources>

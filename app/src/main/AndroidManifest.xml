@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.YunDays"
+    tools:ignore="MissingLeanbackLauncher">
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 读写文件权限获取 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TryYun"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ui.user.AddFriendActivity" />
+        <activity android:name=".ui.user.FriendActivity" />
+        <activity android:name=".ui.daka.SetDakaMsgActivity" />
+        <activity android:name=".ui.time_class.UpdateClassEventActivity" />
+        <activity android:name=".ui.calendar.UpdateDayEventActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ui.time_class.AddClassActivity" />
+        <activity android:name=".ui.calendar.AddDayEventActivity" />
+        <activity android:name=".ui.daka.AddDakaActivity" />
+        <activity android:name=".ui.user.SettingsActivity" />
+        <activity android:name=".ui.user.FeedbackActivity" />
+        <activity android:name=".ui.user.UserInformationActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".ui.calendar.alarm.notificationService" />
+    </application>
+
+</manifest>

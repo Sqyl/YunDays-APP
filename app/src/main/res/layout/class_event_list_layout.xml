@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_baseline_book_24"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/classEventName"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="match_parent"
+                android:textSize="14sp"
+                android:gravity="center" />
+            <TextView
+                android:id="@+id/class_begin_end"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="@color/black"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="0dp"
+                android:src="@drawable/ic_user_24"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/classEvent_teacher"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_baseline_classroom_24" />
+            <TextView
+                android:id="@+id/classEvent_classroom"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3sp"
+            android:background="@color/black"/>
+    </LinearLayout>
+</LinearLayout>

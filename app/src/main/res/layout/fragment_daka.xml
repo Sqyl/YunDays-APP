@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_daka"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="40dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/title_daka"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+            <ImageView
+                android:id="@+id/dakaEvent_add"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:padding="7dp"
+                android:src="@drawable/ic_baseline_add_24"/>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/dakaList"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:paddingBottom="?attr/actionBarSize"/>
+    <LinearLayout
+        android:background="@color/alice_blue"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:text="@string/Timer_title"
+            android:textSize="34sp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <Chronometer
+            android:id="@+id/timer"
+            android:textSize="40pt"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_restart"
+                android:text="@string/timer_continue"
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:background="@color/azure"
+                android:layout_marginHorizontal="30dp"
+                android:layout_weight="1" />
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:id="@+id/btn_start"
+                android:text="@string/timer_begin"
+                android:background="@color/azure"
+                android:layout_width="0dp"
+                android:textColor="@color/black"
+                android:layout_height="60dp"
+                android:layout_weight="1" />
+            <Button
+                android:text="@string/timer_pause"
+                android:id="@+id/btn_pause"
+                android:layout_width="0dp"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="30dp"
+                android:layout_height="60dp"
+                android:background="@color/azure"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_calendar"
+        android:icon="@drawable/ic_calendar_today_24"
+        android:title="@string/title_calendar" />
+
+    <item
+        android:id="@+id/navigation_time_class"
+        android:icon="@drawable/ic_time_class_analytics_24"
+        android:title="@string/title_time_class" />
+
+    <item
+        android:id="@+id/navigation_daka"
+        android:icon="@drawable/ic_baseline_library_add_check_24"
+        android:title="@string/title_daka" />
+
+    <item
+        android:id="@+id/navigation_user"
+        android:icon="@drawable/ic_user_24"
+        android:title="@string/title_user" />
+
+</menu>
