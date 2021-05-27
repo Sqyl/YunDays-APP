@@ -22,6 +22,7 @@ public class UserInformationActivity extends AppCompatActivity {
     private TextView userPassword_show;
     private TextView userName_show;
     private Button btn_logout;
+    private EventSQLiteOperation operation = new EventSQLiteOperation();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,9 @@ public class UserInformationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(operation.deleteUserClass(UserInformationActivity.this)) {
+                    operation.deleteAllDayEvent(UserInformationActivity.this);
+                    operation.deleteAllClassEvent(UserInformationActivity.this);
+                    operation.deleteAllDakaEvent(UserInformationActivity.this);
                     startActivity(new Intent(UserInformationActivity.this, LoginActivity.class));
                     finish();
                 }

@@ -38,7 +38,7 @@ public class DakaEventRequest {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        String url = "http://192.168.43.105:8090/dakaevent/getDakaEventByUserId";
+        String url = RequestIP.IP_HOTSPOT + "/dakaevent/getDakaEventByUserId";
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                 url, jsonObject, new Response.Listener<JSONObject>() {
@@ -91,7 +91,7 @@ public class DakaEventRequest {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        String url = "http://192.168.43.105:8090/dakaevent/insertDakaEvent";
+        String url = RequestIP.IP_HOTSPOT + "/dakaevent/insertDakaEvent";
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                 url, jsonObject, new Response.Listener<JSONObject>() {
@@ -132,7 +132,7 @@ public class DakaEventRequest {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        String url = "http://192.168.43.105:8090/dakaevent/updateDakaEvent";
+        String url = RequestIP.IP_HOTSPOT + "/dakaevent/updateDakaEvent";
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                 url, jsonObject, new Response.Listener<JSONObject>() {
@@ -169,7 +169,7 @@ public class DakaEventRequest {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        String url = "http://192.168.43.105:8090/dakaevent/deleteDakaEvent";
+        String url = RequestIP.IP_HOTSPOT + "/dakaevent/deleteDakaEvent";
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                 url, jsonObject, new Response.Listener<JSONObject>() {

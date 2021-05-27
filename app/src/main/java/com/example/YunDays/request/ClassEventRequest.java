@@ -38,7 +38,7 @@ public class ClassEventRequest {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        String url = "http://192.168.43.105:8090/classevent/getClassEventByUserId";
+        String url = RequestIP.IP_HOTSPOT + "/classevent/getClassEventByUserId";
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                 url, jsonObject, new Response.Listener<JSONObject>() {
@@ -90,7 +90,7 @@ public class ClassEventRequest {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        String url = "http://192.168.43.105:8090/classevent/insertClassEvent";
+        String url = RequestIP.IP_HOTSPOT + "/classevent/insertClassEvent";
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                 url, jsonObject, new Response.Listener<JSONObject>() {
@@ -133,7 +133,7 @@ public class ClassEventRequest {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        String url = "http://192.168.43.105:8090/classevent/updateClassEvent";
+        String url = RequestIP.IP_HOTSPOT + "/classevent/updateClassEvent";
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                 url, jsonObject, new Response.Listener<JSONObject>() {
@@ -170,7 +170,7 @@ public class ClassEventRequest {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        String url = "http://192.168.43.105:8090/classevent/deleteClassEvent";
+        String url = RequestIP.IP_HOTSPOT + "/classevent/deleteClassEvent";
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                 url, jsonObject, new Response.Listener<JSONObject>() {

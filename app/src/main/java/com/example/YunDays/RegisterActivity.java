@@ -16,6 +16,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.YunDays.request.RequestIP;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -61,7 +62,7 @@ public class RegisterActivity extends AppCompatActivity {
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    String url = "http://192.168.31.220:8090/user/register";
+                    String url = RequestIP.IP_HOTSPOT + "/user/register";
                     RequestQueue requestQueue = Volley.newRequestQueue(RegisterActivity.this);
                     Log.i(TAG, "onClick: " + jsonObject.toString());
                     JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,

@@ -38,7 +38,7 @@ public class DayEventRequest {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        String url = "http://192.168.43.105:8090/dayevent/getDayEventByUserId";
+        String url = RequestIP.IP_HOTSPOT + "/dayevent/getDayEventByUserId";
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                 url, jsonObject, new Response.Listener<JSONObject>() {
@@ -87,7 +87,7 @@ public class DayEventRequest {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        String url = "http://192.168.43.105:8090/dayevent/insertDayEvent";
+        String url = RequestIP.IP_HOTSPOT + "/dayevent/insertDayEvent";
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                 url, jsonObject, new Response.Listener<JSONObject>() {
@@ -128,7 +128,7 @@ public class DayEventRequest {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        String url = "http://192.168.43.105:8090/dayevent/updateDayEvent";
+        String url = RequestIP.IP_HOTSPOT + "/dayevent/updateDayEvent";
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                 url, jsonObject, new Response.Listener<JSONObject>() {
@@ -166,7 +166,7 @@ public class DayEventRequest {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        String url = "http://192.168.43.105:8090/dayevent/deleteDayEvent";
+        String url = RequestIP.IP_HOTSPOT + "/dayevent/deleteDayEvent";
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                 url, jsonObject, new Response.Listener<JSONObject>() {
