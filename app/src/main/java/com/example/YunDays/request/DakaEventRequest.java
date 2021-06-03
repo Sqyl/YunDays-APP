@@ -45,11 +45,9 @@ public class DakaEventRequest {
             @Override
             public void onResponse(JSONObject response) {
                 try {
-                    Log.i(TAG, "onResponse: 1");
                     String msg = response.getString("msg");
                     if (msg.equals("查询到打卡项")) {
                         JSONArray detail = response.getJSONArray("detail");
-                        Log.i(TAG, "onResponse: " + detail.toString());
                         List<dakaEvent> dakaEvents = gson.fromJson(detail.toString(),
                                 new TypeToken<List<dakaEvent>>(){}.getType());
 

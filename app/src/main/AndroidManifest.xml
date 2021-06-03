@@ -24,6 +24,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TryYun"
         android:usesCleartextTraffic="true">
+        <activity android:name=".ui.user.ShowDakaActivity"></activity>
         <activity android:name=".ui.user.AddFriendActivity" />
         <activity android:name=".ui.user.FriendActivity" />
         <activity android:name=".ui.daka.SetDakaMsgActivity" />

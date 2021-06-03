@@ -18,6 +18,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.YunDays.R;
+import com.example.YunDays.request.RequestIP;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -58,7 +59,7 @@ public class SetDakaMsgActivity extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                String url = "http://192.168.31.220:8090/dakamsg/insertDakaMsg";
+                String url = RequestIP.IP_HOTSPOT + "/dakamsg/insertDakaMsg";
                 RequestQueue requestQueue = Volley.newRequestQueue(SetDakaMsgActivity.this);
                 JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                         url, jsonObject, new Response.Listener<JSONObject>() {

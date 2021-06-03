@@ -105,5 +105,6 @@
     <string name="friendList">好友列表</string>
     <string name="title_add_friends">添加好友</string>
     <string name="input_friend">请输入好友ID</string>
+    <string name="show_daka">好友打卡项</string>
 
 </resources>

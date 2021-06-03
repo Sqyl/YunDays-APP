@@ -24,6 +24,7 @@ import com.example.YunDays.R;
 import com.example.YunDays.adapter.friendAdapter;
 import com.example.YunDays.event.Friend;
 import com.example.YunDays.event.dayEvent;
+import com.example.YunDays.request.RequestIP;
 import com.example.YunDays.sqlite.EventSQLiteOperation;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -67,7 +68,7 @@ public class FriendActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        String url = "http://192.168.43.105:8090/friends/getFriendsByUserId";
+        String url = RequestIP.IP_HOTSPOT + "/friends/getFriendsByUserId";
         RequestQueue requestQueue = Volley.newRequestQueue(FriendActivity.this);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                 url, jsonObject, new Response.Listener<JSONObject>() {
@@ -99,8 +100,12 @@ public class FriendActivity extends AppCompatActivity {
             }
         });
         requestQueue.add(jsonObjectRequest);
-        Log.i(TAG, "onCreate: " + friends.size());
         friendAdapter = new friendAdapter(FriendActivity.this, friends);
         listView.setAdapter(friendAdapter);
+        listView.setOnItemClickListener((parent, view, position, id) -> {
+            Intent intent1 = new Intent(FriendActivity.this, ShowDakaActivity.class);
+            intent1.putExtra("FriendID", friends.get(position).getFriendId());
+            startActivity(intent1);
+        });
     }
 }

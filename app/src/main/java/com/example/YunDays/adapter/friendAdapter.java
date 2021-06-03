@@ -42,7 +42,6 @@ public class friendAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Log.i(TAG, "getView:inadapter " + this.friends.size());
         ViewHolder viewHolder;
         if (convertView == null) {
             viewHolder = new ViewHolder();
